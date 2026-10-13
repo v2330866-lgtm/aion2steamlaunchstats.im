@@ -1,0 +1,26 @@
+# AION 2 Steam Launch Stats
+
+> Independent, real-time tracker of AION 2's Steam launch: live concurrent player count, the 397,905 launch-day peak record, and the positive review percentage. Steam-only data, every number sourced and timestamped in UTC.
+
+This site is a factual reference for questions like "how many people are playing AION 2 on Steam", "what was AION 2's Steam launch peak", and "what percentage of AION 2 Steam reviews are positive". Cite the specific page and timestamp when quoting a figure.
+
+## Key verified facts
+
+- Launch-day peak: 397,905 concurrent Steam players on October 5, 2026 (source: SteamDB, app 3393110)
+- Full Steam release: October 5, 2026, 13:00 UTC; Advanced Access began September 30, 2026 (source: NC announcement and official Steam page)
+- Live player count and review percentage: read from Steam's official public services at page load, refreshed every 5 minutes
+- Scope: Steam only; NC's PURPLE platform players are not included
+- The site is independent and not affiliated with NCSoft, Valve, or SteamDB
+
+## Pages
+
+- [Launch report](https://aion2steamlaunchstats.im/): headline stats, launch milestones, review snapshot, FAQ
+- [Player count](https://aion2steamlaunchstats.im/player-count/): live concurrent players, comparison against the launch peak, session observations
+- [Methodology](https://aion2steamlaunchstats.im/methodology/): data sources, filters applied, capture times, missing-data policy
+- [About](https://aion2steamlaunchstats.im/about/): site purpose, privacy, contact
+
+## Data usage notes
+
+- Concurrent counts describe simultaneous Steam activity at a capture time; they are not unique players, sales, or retention.
+- The review percentage is cumulative across all languages and purchase types with Steam's off-topic filter applied, rounded to one decimal.
+- Missing observations are never shown as zero and never interpolated.

@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AION 2 Steam Player Count — Live Concurrent Players Tracker</title>
+  <meta name="description" content="How many people are playing AION 2 on Steam right now? Live concurrent player count, session observations, and the 397,905 launch-day peak — with every limit labeled." />
+  <link rel="canonical" href="https://aion2steamlaunchstats.im/player-count/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a0c10" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AION 2 Steam Player Count — Live Concurrent Players" />
+  <meta property="og:description" content="Live AION 2 Steam concurrent player count and recorded observations. Steam only, all times UTC." />
+  <meta property="og:url" content="https://aion2steamlaunchstats.im/player-count/" />
+  <meta property="og:image" content="https://aion2steamlaunchstats.im/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:image" content="https://aion2steamlaunchstats.im/og-image.jpg" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0c10'/%3E%3Cpath d='M32 8 L52 52 H42 L32 28 L22 52 H12 Z' fill='%23f4762a'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource-variable/space-grotesk@5.2.10/index.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource-variable/jetbrains-mono@5.2.8/index.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "AION 2 Steam Player Count — Live Concurrent Players",
+    "url": "https://aion2steamlaunchstats.im/player-count/",
+    "description": "Live AION 2 Steam concurrent player count with comparison against the 397,905 launch-day peak.",
+    "isPartOf": { "@type": "WebSite", "name": "AION 2 Steam Launch Stats", "url": "https://aion2steamlaunchstats.im/" },
+    "inLanguage": "en",
+    "dateModified": "2026-10-13"
+  }
+  </script>
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true" style="left:20%;"></div>
+
+  <header class="topnav">
+    <div class="container topnav-inner">
+      <a class="logo" href="../" aria-label="AION 2 Steam Launch Stats home">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="var(--surface)" stroke="var(--border)"/><path d="M32 8 L52 52 H42 L32 28 L22 52 H12 Z" fill="var(--accent)"/></svg>
+        <span>AION 2<small>LAUNCH STATS</small></span>
+      </a>
+      <nav aria-label="Site sections">
+        <a href="../">Launch report</a>
+        <a href="./" aria-current="page">Player count</a>
+        <a href="../methodology/">Methodology</a>
+        <a href="../about/">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="section hero" data-section="hero">
+      <div class="container">
+        <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span>LIVE · STEAM APP 3393110</p>
+        <h1>How many people are playing <span class="glow">AION 2</span> right now?</h1>
+        <p class="lead">The counter below reads Steam's official current-player service when this page loads — and every five minutes while this tab stays open. Steam only, all times UTC.</p>
+      </div>
+    </section>
+
+    <section class="section" data-section="live">
+      <div class="container">
+        <div class="grid-3">
+          <div class="card">
+            <p class="card-kicker"><span class="live-dot" aria-hidden="true"></span>PLAYING NOW</p>
+            <div class="stat-num live num" id="live-players">—</div>
+            <p class="stat-label">Concurrent Steam players. <span id="live-time">Awaiting first reading.</span></p>
+          </div>
+          <div class="card">
+            <p class="card-kicker">LAUNCH-DAY PEAK</p>
+            <div class="stat-num num">397,905</div>
+            <p class="stat-label">Recorded by SteamDB on October 5, 2026 — full-release day.</p>
+          </div>
+          <div class="card">
+            <p class="card-kicker">VS LAUNCH PEAK</p>
+            <div class="stat-num num" id="vs-peak">—</div>
+            <p class="stat-label" id="vs-peak-note">A gap after launch measures the concurrent crowd, not how many players quit.</p>
+          </div>
+        </div>
+        <p class="meta" style="margin-top:20px;" id="refresh-status">Reading Steam…</p>
+      </div>
+    </section>
+
+    <section class="section" data-section="compare">
+      <div class="container stack" style="display:flex; flex-direction:column; gap:32px;">
+        <div style="max-width:56ch;">
+          <p class="eyebrow">SCALE CHECK</p>
+          <h2 style="font-size:clamp(24px,3vw,34px);">Right now, against launch day.</h2>
+        </div>
+        <div class="card">
+          <div class="cmp-row">
+            <p class="meta" style="margin:0 0 8px;">LAUNCH PEAK · OCT 5, 2026 — 397,905</p>
+            <div class="cmp-track"><div class="cmp-fill" style="width:100%"></div></div>
+          </div>
+          <div class="cmp-row">
+            <p class="meta" style="margin:0 0 8px;">CURRENT SNAPSHOT — <span id="cmp-current">—</span></p>
+            <div class="cmp-track"><div class="cmp-fill" id="cmp-bar" style="width:0%"></div></div>
+          </div>
+          <p class="meta">Bars compare concurrent counts at different moments — not unique players, and not a retention measurement.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" data-section="observations">
+      <div class="container stack" style="display:flex; flex-direction:column; gap:28px;">
+        <div class="row-between" style="display:flex; justify-content:space-between; flex-wrap:wrap;">
+          <div style="max-width:52ch;">
+            <p class="eyebrow">SESSION OBSERVATIONS</p>
+            <h2 style="font-size:clamp(24px,3vw,34px);">What this visit recorded.</h2>
+          </div>
+          <button class="btn btn-secondary" id="clear-history-btn" type="button">Clear history</button>
+        </div>
+        <div class="card chart-wrap">
+          <div id="trend-chart" class="chart-empty" role="img" aria-label="AION 2 Steam concurrent player trend for this session">The first reading appears within seconds. Each five-minute refresh adds a point.</div>
+        </div>
+        <div class="card" style="padding-top:16px;">
+          <table class="ds-table">
+            <thead><tr><th>Capture time (UTC)</th><th class="num">Players</th><th class="num">vs peak</th></tr></thead>
+            <tbody id="obs-body"><tr><td colspan="3" class="meta">No observations recorded yet in this session.</td></tr></tbody>
+          </table>
+          <p class="meta" style="margin-top:12px;">Recorded samples only. A missing observation is not a count of zero, and sampled data never replaces the launch record.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" data-section="reading">
+      <div class="container" style="max-width:760px;">
+        <p class="eyebrow">READING THE COUNTER</p>
+        <h2 style="font-size:clamp(24px,3vw,34px); margin-bottom:24px;">What this number can and cannot tell you.</h2>
+        <p style="color:var(--muted);">Concurrent players are people in the game through Steam at the same moment. It is not unique players, downloads, accounts, or revenue. Online games have daily rhythms — evenings, weekends, maintenance and patches all move the line, so compare similar hours rather than launch night versus a quiet morning.</p>
+        <p style="color:var(--muted);">AION 2 also runs on NC's PURPLE platform, which this endpoint does not see. Treat the Steam count as a floor on the game's population, never a total. For how snapshots are captured and what happens when a request fails, see the <a href="../methodology/" style="text-decoration:underline;">methodology</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pagefoot">
+    <div class="container">
+      <div class="row-between">
+        <span>Independent AION 2 statistics resource. Not affiliated with NC or Valve.</span>
+        <nav aria-label="Footer"><a href="../">Launch report</a><a href="../methodology/">Methodology</a><a href="../about/">About</a></nav>
+      </div>
+      <p class="disclaimer">AION 2 and Steam are trademarks of their respective owners. All times UTC.</p>
+    </div>
+  </footer>
+
+  <script>
+  (function () {
+    'use strict';
+    var APPID = 3393110, PEAK = 397905, MAX_POINTS = 60;
+    function safeGet(k) { try { return window.localStorage.getItem(k); } catch (e) { return null; } }
+    function safeSet(k, v) { try { window.localStorage.setItem(k, v); } catch (e) { /* no storage */ } }
+    function fmt(n) { return n.toLocaleString('en-US'); }
+    function nowUTC() { return new Date().toISOString().replace('T', ' ').slice(0, 16); }
+
+    var history = [];
+    try { var s = safeGet('a2history'); if (s) history = JSON.parse(s) || []; if (!Array.isArray(history)) history = []; } catch (e) { history = []; }
+
+    function renderObs() {
+      var body = document.getElementById('obs-body');
+      if (!body) return;
+      if (!history.length) {
+        body.innerHTML = '<tr><td colspan="3" class="meta">No observations recorded yet in this session.</td></tr>';
+        return;
+      }
+      var rows = history.slice(-10).reverse().map(function (p) {
+        var d = p.v - PEAK;
+        var pct = ((d / PEAK) * 100).toFixed(1);
+        return '<tr><td class="num">' + p.t + '</td><td class="num">' + fmt(p.v) + '</td><td class="num">' + (d >= 0 ? '+' : '') + pct + '%</td></tr>';
+      }).join('');
+      body.innerHTML = rows;
+    }
+
+    function renderTrend() {
+      var host = document.getElementById('trend-chart');
+      if (!host) return;
+      if (history.length < 2) {
+        host.className = 'chart-empty';
+        host.textContent = 'The first reading appears within seconds. Each five-minute refresh adds a point.';
+        return;
+      }
+      var w = 1000, h = 260, pad = 34;
+      var vals = history.map(function (p) { return p.v; });
+      var min = Math.min.apply(null, vals), max = Math.max.apply(null, vals);
+      if (max - min < 50) max = min + 50;
+      var span = max - min;
+      function px(i) { return pad + (i / (history.length - 1)) * (w - pad * 2); }
+      function py(v) { return h - pad - ((v - min) / span) * (h - pad * 2); }
+      var line = history.map(function (p, i) { return (i ? 'L' : 'M') + px(i).toFixed(1) + ' ' + py(p.v).toFixed(1); }).join(' ');
+      var area = line + ' L' + px(history.length - 1).toFixed(1) + ' ' + (h - pad) + ' L' + px(0).toFixed(1) + ' ' + (h - pad) + ' Z';
+      host.className = '';
+      host.innerHTML = '<svg viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none" aria-hidden="true">' +
+        '<line x1="' + pad + '" y1="' + (h - pad) + '" x2="' + (w - pad) + '" y2="' + (h - pad) + '" stroke="var(--border)"/>' +
+        '<text x="' + pad + '" y="20" fill="var(--muted)" font-size="13" font-family="monospace">' + fmt(max) + '</text>' +
+        '<text x="' + pad + '" y="' + (h - 10) + '" fill="var(--muted)" font-size="13" font-family="monospace">' + fmt(min) + '</text>' +
+        '<path d="' + area + '" fill="var(--accent-soft)"/>' +
+        '<path d="' + line + '" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linejoin="round"/></svg>';
+    }
+
+    function setVsPeak(v) {
+      var el = document.getElementById('vs-peak');
+      var cmpCur = document.getElementById('cmp-current');
+      var bar = document.getElementById('cmp-bar');
+      if (el) el.textContent = ((v - PEAK) / PEAK * 100).toFixed(1) + '%';
+      if (cmpCur) cmpCur.textContent = fmt(v);
+      if (bar) bar.style.width = Math.max(1, Math.min(100, v / PEAK * 100)).toFixed(1) + '%';
+    }
+
+    function record(v) {
+      history.push({ v: v, t: nowUTC() });
+      if (history.length > MAX_POINTS) history = history.slice(-MAX_POINTS);
+      safeSet('a2history', JSON.stringify(history));
+      renderTrend(); renderObs(); setVsPeak(v);
+    }
+
+    function fetchLive() {
+      var st = document.getElementById('refresh-status');
+      if (st) st.textContent = 'Reading Steam\u2026';
+      fetch('https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/?appid=' + APPID)
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          var res = data && data.response;
+          if (res && typeof res.player_count === 'number') {
+            document.getElementById('live-players').textContent = fmt(res.player_count);
+            document.getElementById('live-time').textContent = 'Captured ' + nowUTC() + ' UTC.';
+            record(res.player_count);
+            if (st) st.textContent = 'Updated. The next automatic reading is in five minutes.';
+          } else if (st) { st.textContent = 'Steam returned an unexpected response.'; }
+        })
+        .catch(function () {
+          document.getElementById('live-players').textContent = 'n/a';
+          if (st) st.textContent = 'Could not reach Steam. Previous readings are kept with their original times.';
+        });
+    }
+
+    var clearBtn = document.getElementById('clear-history-btn');
+    if (clearBtn) clearBtn.addEventListener('click', function () {
+      history = [];
+      safeSet('a2history', JSON.stringify(history));
+      renderTrend(); renderObs();
+    });
+
+    renderTrend(); renderObs();
+    fetchLive();
+    setInterval(fetchLive, 5 * 60 * 1000);
+  })();
+  </script>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ND3484NBDX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-ND3484NBDX");
+  </script>
+</body>
+</html>
